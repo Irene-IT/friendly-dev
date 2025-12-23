@@ -1,0 +1,74 @@
+{  
+"projects": [
+  {
+    "id": 1,
+    "title": "Назва1",
+    "description": "Опис1",
+    "image": "/images/project-1.png",
+    "url": "https://example.com",
+    "date": "2025-02-01",
+    "category": "Fullstack",
+    "featured": false
+  },
+  {
+    "id": 2,
+    "title": "Назва2",
+    "description": "Опис2",
+    "image": "/images/project-2.png",
+    "url": "https://example.com",
+    "date": "2025-01-20",
+    "category": "Frontend",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Назва3",
+    "description": "Опис3",
+    "image": "/images/project-3.png",
+    "url": "https://example.com",
+    "date": "2024-12-15",
+    "category": "Frontend",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Назва4",
+    "description": "Опис4",
+    "image": "/images/project-4.png",
+    "url": "https://example.com",
+    "date": "2024-11-05",
+    "category": "Fullstack",
+    "featured": false
+  },
+  {"id": 5,
+    "title": "Назва5",
+    "description": "Опис5",
+    "image": "/images/project-5.png",
+    "url": "https://example.com",
+    "date": "2024-10-12",
+    "category": "Frontend",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Назва6",
+    "description": "Опис6",
+    "image": "/images/project-6.png",
+    "url": "https://example.com",
+    "date": "2024-09-28",
+    "category": "Fullstack",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Назва7",
+    "description": "Опис7",
+    "image": "/images/project-7.png",
+    "url": "https://example.com",
+    "date": "2024-09-01",
+    "category": "Fullstack",
+    "featured": false
+  }
+]
+}
+
