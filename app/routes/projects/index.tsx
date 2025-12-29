@@ -97,14 +97,22 @@ export async function loader({
   // );
 
 const res = await fetch(
-  `${import.meta.env.VITE_STRAPI_API_URL}/projects?populate=*`
+  `${import.meta.env.VITE_STRAPI_API_URL}/api/projects?populate=*`
 );
 
-console.log('API URL:', import.meta.env.VITE_API_URL);
+console.log('STATUS:', res.status);
+console.log('STATUS TEXT:', res.statusText);
 
-  if (!res.ok) {
-    throw new Error('Не вдалося завантажити проєкти');
-  }
+const text = await res.text();
+console.log('BODY:', text);
+
+if (!res.ok) {
+  throw new Error('Loader failed');
+}
+
+  // if (!res.ok) {
+  //   throw new Error('Не вдалося завантажити проєкти');
+  // }
 
 
   const json: StrapiResponse<StrapiProject> = await res.json();
