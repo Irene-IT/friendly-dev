@@ -15,7 +15,8 @@ export async function loader({
   const url = new URL(request.url);
 
   const [projectRes, postRes] = await Promise.all([
-    fetch(`${import.meta.env.VITE_API_URL}/projects`),
+    // fetch(`${import.meta.env.VITE_API_URL}/projects`),
+    fetch(`${import.meta.env.VITE_STRAPI_API_URL}/projects`),
     fetch(new URL('/data/posts-meta.json', url)),
   ]);
 
