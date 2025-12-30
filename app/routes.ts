@@ -7,8 +7,8 @@ export default [
     route('contact', './routes/contact/index.tsx'),
     route('projects', './routes/projects/index.tsx'),
     route('projects/:id', './routes/projects/details.tsx'),
-    // route('blog', './routes/blog/index.tsx'),
-    // route('blog/:slug', './routes/blog/details.tsx'),
+    route('blog', './routes/blog/index.tsx'),
+    route('blog/:slug', './routes/blog/details.tsx'),
     // Це буде перехоплювати всі маршрути, які не відповідають жодному з визначених ^ маршрутів і видасть 404.
     route('*', './routes/errors/not-found.tsx'),
   ]),
