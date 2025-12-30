@@ -92,27 +92,13 @@ export default ProjectsPage;
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  // const res = await fetch(
-  //   `${import.meta.env.VITE_API_URL}/projects?populate=*`
-  // );
+  const res = await fetch(
+    `${import.meta.env.VITE_STRAPI_API_URL}/projects?populate=*`
+  );
 
-const res = await fetch(
-  `${import.meta.env.VITE_STRAPI_API_URL}/api/projects?populate=*`
-);
-
-console.log('STATUS:', res.status);
-console.log('STATUS TEXT:', res.statusText);
-
-const text = await res.text();
-console.log('BODY:', text);
-
-if (!res.ok) {
-  throw new Error('Loader failed');
-}
-
-  // if (!res.ok) {
-  //   throw new Error('Не вдалося завантажити проєкти');
-  // }
+  if (!res.ok) {
+    throw new Error('Не вдалося завантажити проєкти');
+  }
 
 
   const json: StrapiResponse<StrapiProject> = await res.json();
@@ -122,9 +108,11 @@ if (!res.ok) {
     documentId: item.documentId,
     title: item.title,
     description: item.description,
+
     // image: item.image?.url
     //   ? `${import.meta.env.VITE_STRAPI_URL}${item.image.url}`
     //   : '/images/no-image.png',
+
     image: item.image?.url
       ? `${item.image.url}`
       : '/images/no-image.png',

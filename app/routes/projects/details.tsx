@@ -31,18 +31,12 @@ export function HydrateFallback() {
 export async function loader({ params }: Route.LoaderArgs) {
   const { id } = params;
 
-  // const res = await fetch(
-  //   `${
-  //     import.meta.env.VITE_API_URL
-  //   }/projects?filters[documentId][$eq]=${id}&populate=*`
-  // );
   const res = await fetch(
     `${
       import.meta.env.VITE_STRAPI_API_URL
     }/projects?filters[documentId][$eq]=${id}&populate=*`
   );
 
-console.log('API URL:', import.meta.env.VITE_API_URL);
 
   if (!res.ok) {
     throw new Error('Не вдалося завантажити проєкт');
