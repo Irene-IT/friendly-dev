@@ -51,7 +51,7 @@ const ContactPage = () => {
       ) : null} */}
 
       <form
-        method="post"
+        method="POST"
         action="https://formspree.io/f/xeejvrgn"
         className="space-y-6"
       >
@@ -142,5 +142,4 @@ const ContactPage = () => {
     </section>
   );
 };
-
 export default ContactPage;

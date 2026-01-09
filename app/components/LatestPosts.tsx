@@ -34,7 +34,7 @@ const LatestPosts = ({ posts, limit}:LatestPostsProps) => {
               {post.excerpt}
             </p>
             <span className='block mt-3 text-xs text-gray-400'>
-              {new Date(post.date).toLocaleDateString()}
+              {new Date(post.date + "T00:00:00Z").toLocaleDateString()}
             </span>
           </Link>
         ))}

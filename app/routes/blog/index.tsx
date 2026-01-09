@@ -72,13 +72,3 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
 
 export default BlogPage;
 
-// Сортування постів
-// від найновішого до найстарішого
-// data.sort((a, b) => {
-//   return new Date(b.date).getTime() - new Date(a.date).getTime();
-// });
-
-// від найстарішого до найновішого
-// data.sort((a, b) => {
-//   return new Date(a.date).getTime() - new Date(b.date).getTime();
-// });

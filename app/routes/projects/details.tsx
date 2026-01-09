@@ -103,7 +103,8 @@ const { project } = loaderData as { project: Project };
             {project.title}
           </h1>
           <p className='text-gray-300 text-sm mb-4'>
-            {new Date(project.date).toLocaleDateString()} &bull; {project.category}
+            {/* {new Date(project.date).toLocaleDateString()} &bull; {project.category} */}
+            {new Date(project.date + "T00:00:00Z").toLocaleDateString()} &bull; {project.category}
           </p>
           <p className='text-gray-200 mb-6'>{project.description}</p>
 
